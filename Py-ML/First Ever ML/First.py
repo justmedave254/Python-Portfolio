@@ -1,6 +1,8 @@
 import csv
 from pandas import read_csv
 from pandas import set_option
+from matplotlib import pyplot
+from threading import Thread
 
 path1 = r"C:\Users\User\OneDrive\Documents\Code\Py ML\IRIS.csv"
 path2 = r"C:\Users\User\OneDrive\Documents\Code\Py ML\diabetes.csv"
@@ -33,3 +35,13 @@ print(correlations)
 print("-----------------------------")
 print("Using skew function to determine skew")
 print(data2.skew())
+
+print("-----------------------------")
+print("Using hist function to generate a histogram")
+data2.hist()
+pyplot.show()
+
+print("-----------------------------")
+print("Generating a Density Plot")
+data2.plot(kind='density', subplots=True,  layout=(3,3), sharex=False)
+pyplot.show()
