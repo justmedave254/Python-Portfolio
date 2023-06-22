@@ -30,3 +30,6 @@ print("Prints the correlations between the pairs in the matrix")
 correlations = data2.corr(method='pearson')
 print(correlations)
 
+print("-----------------------------")
+print("Using skew function to determine skew")
+print(data2.skew())
